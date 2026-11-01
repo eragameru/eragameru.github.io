@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Контакты и реквизиты — ЭРАGAMERU</title>
+  <meta name="description" content="Контакты и реквизиты продавца ЭРАGAMERU.">
+  <link rel="icon" href="/img/mark.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600&family=Russo+One&display=swap">
+  <link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+<main class="wrap">
+  <div class="page-head">
+    <h1>Контакты и реквизиты</h1>
+    <p>По вопросам покупок, возврата и работы игр пишите на почту — ответим в течение 3 рабочих дней.</p>
+  </div>
+
+  <section class="section" style="padding-top:20px">
+    <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(300px,1fr))">
+      <div class="card">
+        <h2 style="font-size:22px">Реквизиты продавца</h2>
+        <dl class="req">
+          <dt>Бренд</dt><dd data-company>ЭРАGAMERU</dd>
+          <dt>Продавец</dt><dd><span data-seller="name"></span></dd>
+          <dt>Статус</dt><dd><span data-seller="status"></span></dd>
+          <dt>ИНН</dt><dd><span data-seller="inn"></span></dd>
+          <dt data-seller-row="ogrnip">ОГРНИП</dt><dd data-seller-row="ogrnip"><span data-seller="ogrnip"></span></dd>
+          <dt data-seller-row="city">Город</dt><dd data-seller-row="city"><span data-seller="city"></span></dd>
+        </dl>
+      </div>
+      <div class="card">
+        <h2 style="font-size:22px">Связаться</h2>
+        <dl class="req">
+          <dt>Почта</dt><dd><a data-seller="email"></a></dd>
+          <dt data-seller-row="phone">Телефон</dt><dd data-seller-row="phone"><span data-seller="phone"></span></dd>
+          <dt>Ответ</dt><dd>в течение 3 рабочих дней</dd>
+        </dl>
+        <p style="margin:18px 0 0" class="muted">В письме укажите игру, ваш игровой ID (в «Рубеже» — в разделе «Друзья», вида Имя#12345),
+          а если вопрос о покупке — дату и сумму платежа.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <h2>Документы</h2>
+    <div class="grid">
+      <a class="card" style="text-decoration:none;color:inherit" href="/offer/"><h3>Публичная оферта</h3><p class="muted" style="margin:0">Условия покупки игровой валюты и наборов.</p></a>
+      <a class="card" style="text-decoration:none;color:inherit" href="/refund/"><h3>Правила возврата</h3><p class="muted" style="margin:0">Когда и как вернуть деньги.</p></a>
+      <a class="card" style="text-decoration:none;color:inherit" href="/privacy/"><h3>Конфиденциальность</h3><p class="muted" style="margin:0">Какие данные мы собираем и зачем.</p></a>
+    </div>
+  </section>
+</main>
+<script src="/data/seller.js"></script>
+<script src="/data/games.js"></script>
+<script src="/assets/site.js"></script>
+<script src="/assets/analytics.js"></script>
+</body>
+</html>

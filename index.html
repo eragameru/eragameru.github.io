@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ЭРАGAMERU — игры для Windows и Android</title>
+  <meta name="description" content="ЭРАGAMERU — компьютерные и мобильные игры. Каталог игр, скачивание для Windows и Android, магазин и поддержка игроков.">
+  <meta property="og:title" content="ЭРАGAMERU — игры для Windows и Android">
+  <meta property="og:description" content="Каталог игр ЭРАGAMERU: скачивание, цены, поддержка.">
+  <meta property="og:image" content="/img/avatar.png">
+  <link rel="icon" href="/img/mark.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600&family=Russo+One&display=swap">
+  <link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+<main>
+  <section class="hero">
+    <div class="glow"></div>
+    <div class="wrap hero-in">
+      <img class="mark" src="/img/mark.png" alt="">
+      <h1 class="wm" aria-label="ЭРАGAMERU"><span class="a">ЭРА</span><span class="b">GAMERU</span></h1>
+      <p class="slogan">Компьютерные и мобильные игры для Windows и Android. Скачивайте бесплатно, играйте с друзьями по сети.</p>
+      <div class="buttons">
+        <a class="btn" href="#games">Каталог игр</a>
+        <a class="btn ghost" href="/shop/">Магазин и цены</a>
+      </div>
+      <div class="stats">
+        <span><b data-stat="games">—</b>в каталоге</span>
+        <span><b data-stat="platforms">—</b></span>
+        <span><b>ЮKassa</b>безопасная оплата</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="games">
+    <div class="wrap" id="catalog">
+      <div class="section-head">
+        <h2>Игры</h2>
+      </div>
+      <div class="filters">
+        <input class="search" type="search" placeholder="Поиск по названию или жанру" aria-label="Поиск игры">
+      </div>
+      <div class="filters">
+        <div class="chips" data-filter="genre" role="group" aria-label="Жанр"></div>
+        <div class="chips" data-filter="platform" role="group" aria-label="Платформа"></div>
+      </div>
+      <p class="found" aria-live="polite"></p>
+      <div class="games"></div>
+      <p class="empty" hidden>Ничего не нашлось. Попробуйте другой запрос или сбросьте фильтры.</p>
+    </div>
+  </section>
+
+  <section class="section" id="about" style="padding-top:0">
+    <div class="wrap">
+      <div class="section-head"><h2>О компании</h2></div>
+      <div class="grid">
+        <div class="card feature"><div class="ico">🎮</div><h3>Свои игры</h3>
+          <p><span data-company>ЭРАGAMERU</span> делает игры сама: от идеи и графики до серверов и обновлений.</p></div>
+        <div class="card feature"><div class="ico">🆓</div><h3>Бесплатно</h3>
+          <p>Игры скачиваются бесплатно. Покупки внутри игр — только по желанию, цены указаны в рублях в <a href="/shop/">Магазине</a>.</p></div>
+        <div class="card feature"><div class="ico">🔒</div><h3>Безопасная оплата</h3>
+          <p>Оплата проходит на защищённой странице ЮKassa. Данные карты нам не передаются.</p></div>
+        <div class="card feature"><div class="ico">💬</div><h3>Поддержка</h3>
+          <p>Отвечаем на письма в течение 3 рабочих дней. Частые вопросы — в разделе <a href="/support/">Поддержка</a>.</p></div>
+      </div>
+    </div>
+  </section>
+</main>
+<script src="/data/seller.js"></script>
+<script src="/data/games.js"></script>
+<script src="/assets/site.js"></script>
+<script src="/assets/analytics.js"></script>
+</body>
+</html>

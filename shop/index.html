@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Магазин и цены — ЭРАGAMERU</title>
+  <meta name="description" content="Цены на игровую валюту и наборы во всех играх ЭРАGAMERU. Оплата через ЮKassa.">
+  <link rel="icon" href="/img/mark.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600&family=Russo+One&display=swap">
+  <link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+<main class="wrap">
+  <div class="page-head">
+    <h1>Магазин и цены</h1>
+    <p>Все игры скачиваются бесплатно. За рубли внутри игр продаются игровая валюта и наборы — только по желанию игрока.
+      Это цифровые товары: они начисляются на игровой аккаунт и не могут быть выведены или обменяны на деньги.</p>
+  </div>
+
+  <section class="section" style="padding-top:20px">
+    <div data-packs-all></div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <h2>Как купить и получить покупку</h2>
+    <ol class="steps">
+      <li>В игре откройте «Магазин» и выберите набор.</li>
+      <li>Игра откроет защищённую страницу оплаты ЮKassa — оплатите банковской картой или другим доступным там способом.</li>
+      <li>Вернитесь в игру: покупка начислится на ваш игровой аккаунт автоматически, обычно в течение минуты.</li>
+    </ol>
+    <div class="grid" style="margin-top:22px">
+      <div class="card"><h3>Безопасно</h3><p class="muted" style="margin:0">Данные карты вводятся только на странице ЮKassa (ООО НКО «ЮМани») — продавец их не получает и не хранит.</p></div>
+      <div class="card"><h3>Чек</h3><p class="muted" style="margin:0">Чек об оплате формируется в порядке, установленном законодательством РФ.</p></div>
+      <div class="card"><h3>Если что-то не так</h3><p class="muted" style="margin:0">Покупка не пришла за 24 часа — начислим или вернём деньги. Подробнее — в <a href="/support/">Поддержке</a> и <a href="/refund/">правилах возврата</a>.</p></div>
+    </div>
+    <p class="muted" style="margin-top:22px">Цены указаны в рублях, НДС не облагается. Условия покупки — в <a href="/offer/">публичной оферте</a>.
+      Продавец: <span data-seller="name"></span>, ИНН <span data-seller="inn"></span>.</p>
+  </section>
+</main>
+<script src="/data/seller.js"></script>
+<script src="/data/games.js"></script>
+<script src="/assets/site.js"></script>
+<script src="/assets/analytics.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Правила возврата — ЭРАGAMERU</title>
+  <link rel="icon" href="/img/mark.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600&family=Russo+One&display=swap">
+  <link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+<main class="wrap doc">
+  <h1>Правила возврата</h1>
+  <p class="date">Часть <a href="/offer/">публичной оферты</a>. Редакция от 1 ноября 2026 г.</p>
+
+  <h2>Когда деньги возвращаются</h2>
+  <ul>
+    <li>Оплата прошла, но покупка не начислена в течение 24 часов, и Продавец не смог её начислить.</li>
+    <li>Деньги списаны дважды за один заказ или сумма списания больше цены набора.</li>
+    <li>Покупатель отказался от покупки, если купленная валюта ещё не потрачена в Игре
+      (а «Боевой пропуск +» ещё не использован — награды его ветки не получены), — в течение 14 дней с момента оплаты.</li>
+  </ul>
+
+  <h2>Когда возврат не производится</h2>
+  <ul>
+    <li>Покупка начислена и использована в Игре (валюта потрачена на золото, сундуки и т. п., получены награды «Боевого пропуска +»).</li>
+    <li>Прошло больше 14 дней с момента оплаты, кроме случаев, когда покупка не была начислена.</li>
+  </ul>
+
+  <h2>Как вернуть деньги</h2>
+  <ol>
+    <li>Напишите на почту <a data-seller="email"></a>.</li>
+    <li>Укажите игру, дату и сумму платежа, последние 4 цифры карты (если платили картой), ваш игровой ID
+      (в «Рубеже» — в разделе «Друзья», вида Имя#12345) и причину возврата.</li>
+    <li>Продавец ответит в течение 3 рабочих дней. При одобрении возврата деньги отправляются тем же способом,
+      которым была оплата, через сервис ЮKassa. Срок зачисления зависит от банка — обычно до 10 рабочих дней.</li>
+  </ol>
+
+  <h2>Продавец</h2>
+  <div class="card">
+    <dl class="req">
+      <dt>Продавец</dt><dd><span data-seller="name"></span></dd>
+      <dt>ИНН</dt><dd><span data-seller="inn"></span></dd>
+      <dt>Почта</dt><dd><a data-seller="email"></a></dd>
+      <dt data-seller-row="phone">Телефон</dt><dd data-seller-row="phone"><span data-seller="phone"></span></dd>
+    </dl>
+  </div>
+</main>
+<script src="/data/seller.js"></script>
+<script src="/data/games.js"></script>
+<script src="/assets/site.js"></script>
+<script src="/assets/analytics.js"></script>
+</body>
+</html>
