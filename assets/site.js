@@ -67,7 +67,7 @@
         900 + parseFloat(el.style.getPropertyValue('--d') || 0) * 1000);
     });
   }, { rootMargin: '0px 0px -40px 0px' }) : null;
-  const REVEAL = '.card, .game-card, .shot, .steps li, .faq details, .table-scroll, .shop-game-head';
+  const REVEAL = '.card, .game-card, .shot, .steps li, .faq details, .table-scroll, .shop-game-head, .pack';
   function reveal(root) {
     if (!revealer) return;
     const groups = new Map();
@@ -187,12 +187,23 @@
       <tbody>${(g.packs || []).map(p => `<tr><td><b>${esc(p.title)}</b></td><td>${esc(p.gets)}</td><td class="price">${rub(p.price)}</td></tr>`).join('')}</tbody>
     </table></div>`;
   }
+  // карточки товаров для «Магазина»: картинка, название, состав, цена
+  function packCards(g) {
+    return `<div class="packs">${(g.packs || []).map(p => `<article class="card pack">
+        ${p.tag ? `<span class="pack-tag">${esc(p.tag)}</span>` : ''}
+        <div class="pack-art s${p.size || 0}" aria-hidden="true">${Array.from({ length: p.size || 1 }, () => `<span>${esc(p.icon || '💎')}</span>`).join('')}</div>
+        <h3>${esc(p.title)}</h3>
+        <p>${esc(p.gets)}</p>
+        <div class="pack-price">${rub(p.price)}</div>
+        <small class="muted">Покупка — в магазине игры</small>
+      </article>`).join('')}</div>`;
+  }
   $$('[data-packs]').forEach(el => { const g = gameById(el.dataset.packs); if (g) el.innerHTML = pricesTable(g); });
   $$('[data-packs-all]').forEach(el => {
     el.innerHTML = GAMES.filter(g => (g.packs || []).length).map(g => `<section class="shop-game" id="${esc(g.id)}">
         <div class="shop-game-head"><img src="${esc(g.icon)}" alt=""><h2>${esc(g.title)}</h2>
           <a class="btn ghost small" href="${esc(g.url)}">Страница игры</a></div>
-        ${pricesTable(g)}
+        ${packCards(g)}
       </section>`).join('') || '<p class="muted">Платных наборов пока нет.</p>';
   });
 

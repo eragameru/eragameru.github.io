@@ -460,6 +460,30 @@ table.prices { width: 100%; border-collapse: collapse; min-width: 480px; }
   display: grid; place-items: center; font-family: var(--head); color: #2a1700;
   background: linear-gradient(#ffd75e, var(--gold2)); box-shadow: 0 3px 0 #a85d00, 0 0 14px rgba(255, 190, 60, 0.3);
 }
+.packs { display: grid; gap: 18px; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
+.pack { display: flex; flex-direction: column; align-items: center; text-align: center; padding: 26px 20px 22px; overflow: hidden; }
+.pack:hover { transform: translateY(-5px); border-color: var(--frame-hover); box-shadow: var(--shadow-hover), inset 0 1px 0 rgba(255, 255, 255, 0.07); }
+.pack h3 { margin: 6px 0 4px; font-size: 21px; }
+.pack p { color: var(--muted); font-size: 15px; margin: 0 0 14px; flex: 1; }
+.pack small { font-size: 13px; margin-top: 8px; }
+.pack-art {
+  position: relative; width: 116px; height: 116px; margin-bottom: 10px; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; align-content: center;
+  border-radius: 50%; background: radial-gradient(circle at 50% 40%, rgba(120, 170, 255, 0.35), rgba(20, 34, 82, 0.9) 70%);
+  border: 2px solid rgba(255, 201, 60, 0.5); box-shadow: 0 0 0 5px rgba(9, 16, 40, 0.6), 0 10px 26px rgba(0, 0, 0, 0.45), inset 0 0 24px rgba(120, 200, 255, 0.25);
+  font-size: 52px; line-height: 1; transition: transform 0.5s var(--ease);
+}
+.pack-art span { filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.45)); }
+.pack-art.s2 { font-size: 40px; } .pack-art.s3 { font-size: 34px; } .pack-art.s4 { font-size: 30px; }
+.pack-art.s4 span:nth-child(odd) { margin-top: -10px; }
+.pack:hover .pack-art { transform: scale(1.08) rotate(-4deg); }
+.pack-price {
+  font-family: var(--head); font-size: 24px; color: #2a1700; padding: 8px 22px; border-radius: 12px;
+  background: linear-gradient(#ffd75e, var(--gold) 50%, var(--gold2)); box-shadow: 0 3px 0 #a85d00, 0 0 18px rgba(255, 190, 60, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.55);
+}
+.pack-tag {
+  position: absolute; top: 16px; right: -34px; transform: rotate(40deg); padding: 4px 40px; z-index: 5;
+  background: linear-gradient(#5ee08f, #20a85a); color: #062612; font: 700 12px var(--body); text-transform: uppercase; letter-spacing: 0.05em;
+}
 .shop-game { margin-bottom: 44px; }
 .shop-game-head { display: flex; align-items: center; gap: 14px; margin-bottom: 16px; flex-wrap: wrap; }
 .shop-game-head img { width: 58px; height: 58px; border-radius: 14px; border: 2px solid var(--gold); box-shadow: 0 0 0 3px rgba(9, 16, 40, 0.85), 0 8px 18px rgba(0, 0, 0, 0.5); }
